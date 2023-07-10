@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Final Whistle</title>
+    <link rel="stylesheet" href="log-page.css">
+    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="log-page.js"></script>
+    <script>
+        var app = angular.module('registrationApp', []);
+        app.controller('registrationController', ['$scope', function($scope) {
+          
+        }]);
+        app.controller('SignUpController', ['$scope', function($scope) {
+        
+        }]);
+    </script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js"></script>
+    
+</head>
+
+<body ng-app="registrationApp">
+    <div class="background"></div>
+
+     <header class="header">
+        <nav class="navbar">
+            <a href="#">Services</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Help</a>
+        </nav>
+     </header>
+     <div class="container">
+        <div class="content">
+            <h2 class="logo"><i class='bx bx-trophy'></i> 
+                TheFinalWhistle</h2>
+                <div class="text-sci">
+                    <h2> Welcome! <br> 
+                        <span>To Our Football Wonderland</span>
+                    </h2>
+                    <p>where goals are made, rivalries are born, 
+                        and dreams come true.
+      
+                    From the locker room to the pitch, let's dominate the game!
+                </p>
+                        <div class="social-icons">
+                           <a href="#"> <i class='bx bxl-linkedin'></i> </a>
+                           <a href="#"> <i class='bx bxl-facebook'></i> </a>
+                           <a href="# "> <i class='bx bxl-instagram'></i> </a>
+                           <a href="#"> <i class='bx bxl-twitter'></i> </a>
+                        </div>
+                </div>
+                </div>
+                
+            <div class="logreg-box"> 
+                   <div class="form-box login">
+                    <form name="signInForm" ng-controller="registrationController" action="#">
+                        <h2>Sign In</h2>
+
+                        <div class="input-box">
+                            <span class="icon">
+                                <i class="bx bxs-envelope"></i>
+                            </span>
+                            <input type="email" id="signInEmail" name="email" ng-model="signInUser.email" required>
+                            <span class="error" ng-show="signInForm.email.$dirty && signInForm.email.$error.required">Email is required.</span>
+                            <span class="error" ng-show="signInForm.email.$dirty && signInForm.email.$error.email">Invalid email format.</span>
+                            <label for="signInEmail">Email</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon">
+                              <i class="bx bxs-lock-alt" ></i> 
+                            </span>
+                            <input type="password" id="password1" name="password" ng-model="signInUser.password" ng-minlength="8"  required>
+                            <span class="error" ng-show="signInForm.password.$error.required && signInForm.password.$dirty">Password is required.</span>
+                            <span class="error" ng-show="signInForm.password.$error.minlength && signInForm.password.$dirty">Password must be at least 8 characters long.</span>
+                            <label>Password</label>
+                        </div>
+
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">Remember me
+                            </label>
+                            <a href="#">Forgot password?</a>
+                        </div>
+
+                     <button type="submit" id="signInButton" class="btn" ng-disabled="registrationForm.$invalid">Sign In
+                     </button>
+
+                     <div class="login-register">
+                        <p>Don't have an account?
+                            <a href="#"
+                            class="register-link">Sign Up</a>
+                        </p>
+                     </div>
+                    </form>
+                   </div>
+                   
+                   <div class="form-box register">
+                    <form  name="signUpForm" ng-controller="SignUpController" action="#">
+                        <h2>Sign Up</h2>
+
+    
+
+                        
+                        <div class="input-box">
+                            <span class="icon">
+                                <i class="bx bxs-envelope"></i>
+                            </span>
+                            <input type="email" id="signupemail" name="email" ng-model="signUpUser.email" required>
+                            <span class="error" ng-show="signUpForm.email.$dirty && signUpForm.email.$error.required">Email is required.</span>
+                            <span class="error" ng-show="signUpForm.email.$dirty && signUpForm.email.$error.email">Invalid email format.</span>
+                            <label for="signupemail">Email</label>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon">
+                              <i class="bx bxs-lock-alt" ></i> 
+                            </span>
+                            <input type="password" id="password2" name="password" ng-model="signUpUser.password" ng-minlength="8" required>
+                            <span class="error" ng-show="signUpForm.password.$error.required && signUpForm.password.$dirty">Password is required.</span>
+                            <span class="error" ng-show="signUpForm.password.$error.minlength && signUpForm.password.$dirty">Password must be at least 8 characters long.</span>
+                            <label>Password</label></div>
+
+                        <div class="remember-forgot">
+                            <label><input type="checkbox" required>
+                             I agree to the terms & conditions
+                            </label>
+                        </div>
+
+                     <button type="submit" id="signUpButton" class="btn" ng-disabled="registrationForm.$invalid">Sign Up
+                     </button>
+
+                     <div class="login-register">
+                        <p>Already have an account?
+                            <a href="#" 
+                            class="login-link">Sign In</a>
+                        </p>
+                     </div>
+                    </form>
+                   </div>
+                   
+            </div>
+     </div>
+
+     <script type="module">
+        // Your web app's Firebase configuration
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBiaPklZdS-zh-8vnpGtiSMhpk7MnEmtp8",
+            authDomain: "thefinalwhistle-62e49.firebaseapp.com",
+            projectId: "thefinalwhistle-62e49",
+            storageBucket: "thefinalwhistle-62e49.appspot.com",
+            messagingSenderId: "220518426937",
+            appId: "1:220518426937:web:62787990e4e09da16be0e8"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+
+        const signUpButton = document.getElementById("signUpButton");
+        signUpButton.addEventListener('click', (e)=>{
+            var email= document.getElementById('signupemail').value;
+            var password= document.getElementById('password2').value;
+            createUserWithEmailAndPassword(auth, email, password).then((userCredential)=>{
+                const user = userCredential.user;
+                alert("signed up");
+                window.location.href = '../scoreboard/scores.html';
+            })
+            .catch((error)=>{
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage);
+            })
+        })
+
+        const signInButton = document.getElementById("signInButton");
+        signInButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            var email1 = document.getElementById('signInEmail').value;
+            var password11 = document.getElementById('password1').value;
+            signInWithEmailAndPassword(auth, email1, password11)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    window.location.href = '../scoreboard/scores.html';
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert(errorMessage);
+                });
+        });
+    </script>
+
+</body>
+</html>
