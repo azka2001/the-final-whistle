@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World cup 2022</title>
+    <link rel="stylesheet" href="scores.css" />
+	<script>
+		function redirectToBetPage() {
+			window.location.href = "bet.html";
+		}
+		function redirectToMainPage() {
+			window.location.href = "../Matches and Standings/mstandings.html";
+		}
+	</script>
+</head>
+
+<body>
+<div class="container">
+	<!-- code here -->
+	<div class="match">
+		<div class="match-header">
+			<div class="match-status">Live</div>
+			<div class="match-tournament"><img src="https://png.pngtree.com/png-clipart/20221025/original/pngtree-fifa-world-cup-trophy-vector-art-jpg-png-image_8718899.png"/>Champions League 2023</div>
+			<div class="match-actions">
+				<button class="btn-icon"><i class="material-icons-outlined">grade</i></button>
+				<button class="btn-icon"><i class="material-icons-outlined">add_alert</i></button>
+			</div>
+		</div>
+		<div class="match-content">
+			<div class="column">
+				<div class="team team--home">
+					<div class="team-logo">
+						
+						<img src="https://pnggrid.com/wp-content/uploads/2021/06/Spain-Flag-Round-Image.png" />
+					</div>
+					<h2 class="team-name">Spain</h2>
+				</div>
+			</div>
+			<div class="column">
+				<div class="match-details">
+					<div class="match-date">
+						3 May at <strong>17:30</strong>
+					</div>
+					<div class="match-score">
+						<span class="match-score-number match-score-number--leading">3</span>
+						<span class="match-score-divider">:</span>
+						<span class="match-score-number">1</span>
+					</div>
+					<div class="match-time-lapsed">
+						72'
+					</div>
+					<div class="match-referee">
+						Referee: <strong>Mike dean</strong>
+					</div>
+					<div class="match-bet-options">
+						<button class="match-bet-option">1.48</button>
+						<button class="match-bet-option">7.84</button>
+						<button class="match-bet-option">3.24</button>
+					</div>
+					<button class="match-bet-place" onclick="redirectToBetPage()"> Place a bet </button><br>
+					<button class="match-standings" onclick="redirectToMainPage()"> See all match standings</button>
+				</div>
+			</div>
+			<div class="column">
+				<div class="team team--away">
+					<div class="team-logo">
+				
+						<img src="https://static.vecteezy.com/system/resources/previews/011/571/345/original/circle-flag-of-portugal-free-png.png" />
+					</div>
+					<h2 class="team-name">Portugal</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+</html>

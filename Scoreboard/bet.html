@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Your Bet</title>
+    <link rel="stylesheet" href="bet.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content-box">
+            <h1>Place your bet</h1>
+
+            <div class="team-container">
+                <div class="team">
+                    <img src="https://pnggrid.com/wp-content/uploads/2021/06/Spain-Flag-Round-Image.png" alt="Spain Flag">
+                    <h2>Spain</h2>
+                    <button onclick="chooseTeam('Spain')">Spain will win</button>
+                </div>
+                <div clas="Vs">
+                    <h3> VS</h3>
+                </div>
+                <div class="team">
+                    <img src="https://static.vecteezy.com/system/resources/previews/011/571/345/original/circle-flag-of-portugal-free-png.png" alt="Portugal Flag">
+                    <h2>Portugal</h2>
+                    <button onclick="chooseTeam('Portugal')">Portugal will win</button>
+                </div>
+            </div>
+
+            <div class="chat-container">
+                <h2>Chat Room</h2>
+                <div id="chat-messages"></div>
+
+                <div class="chat-input">
+                    <input type="text" id="chat-message" placeholder="Type your message">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+
+            <div class="emoji-container">
+                <button onclick="addEmoji('😃')">😃</button>
+                <button onclick="addEmoji('👍')">👍</button>
+                <button onclick="addEmoji('❤️')">❤️</button>
+                <button onclick="addEmoji('🎉')">🎉</button>
+                <button onclick="addEmoji('🔥')">🔥</button>
+            </div>
+
+            <button class="prediction-button" onclick="openPredictionPage()">Click here to see our prediction</button>
+        </div>
+    </div>
+
+    <script src="bet.js"></script>
+</body>
+
+</html>

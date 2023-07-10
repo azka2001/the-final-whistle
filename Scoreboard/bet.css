@@ -1,0 +1,160 @@
+body {
+    text-align: center;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    overflow-y: scroll;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://i.pinimg.com/originals/3a/21/4a/3a214af1caec7ceef2f5454df3464100.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 100vh;
+
+}
+
+.content-box {
+    background-color: rgba(221, 175, 121, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+h1 {
+    margin-top: 100px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.team {
+    margin: 20px;
+}
+
+.team img {
+    width: 100px;
+    height: auto;
+}
+
+.team h2 {
+    margin-top: 10px;
+}
+
+.team button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #e78a3eaf;
+    border: none;
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.chat-container {
+    margin-top: 50px;
+}
+
+.chat-container h2 {
+    margin-bottom: 20px;
+}
+
+#chat-messages {
+    height: 200px;
+    overflow-y: scroll;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.chat-message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-photo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.chat-input {
+    margin-top: 10px;
+}
+
+.chat-input input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.chat-input button {
+    padding: 10px 20px;
+    background-color: #e78a3eaf;
+    border: none;
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.emoji-container {
+    margin-top: 10px;
+}
+
+.emoji-container button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #e78a3eaf;
+    border: none;
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.prediction-button {
+    margin-top: 50px;
+    padding: 10px 20px;
+    background-color: #e78a3eaf;
+    border: none;
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.prediction-button:hover {
+    background-color: #fff;
+    color: #f0730caf;
+    box-shadow: 0 4px 8px 0 rgba(48, 48, 48, 0.25);
+}
